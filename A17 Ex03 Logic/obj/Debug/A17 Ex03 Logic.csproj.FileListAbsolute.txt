@@ -1,0 +1,7 @@
+C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 Logic\obj\Debug\A17_Ex01_Logic.dll
+C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 Logic\obj\Debug\A17_Ex01_Logic.pdb
+C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 Logic\bin\Debug\A17_Ex01_Logic.dll.config
+C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 Logic\bin\Debug\A17_Ex01_Logic.dll
+C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 Logic\bin\Debug\A17_Ex01_Logic.pdb
+C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 Logic\bin\Debug\Facebook.dll
+C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 Logic\bin\Debug\FbGraphApiWrapper.dll

@@ -1,0 +1,8 @@
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17_Ex01_Logic\bin\Debug\A17_Ex01_Logic.dll.config
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17_Ex01_Logic\bin\Debug\A17_Ex01_Logic.dll
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17_Ex01_Logic\bin\Debug\A17_Ex01_Logic.pdb
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17_Ex01_Logic\bin\Debug\Facebook.dll
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17_Ex01_Logic\bin\Debug\FbGraphApiWrapper.dll
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17_Ex01_Logic\obj\Debug\A17_Ex01_Logic.csprojResolveAssemblyReference.cache
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17_Ex01_Logic\obj\Debug\A17_Ex01_Logic.dll
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17_Ex01_Logic\obj\Debug\A17_Ex01_Logic.pdb

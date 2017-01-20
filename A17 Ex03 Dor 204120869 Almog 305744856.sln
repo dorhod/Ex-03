@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A17 Ex03 UI", "A17 Ex03 UI\A17 Ex03 UI.csproj", "{6800BBE1-76B7-4402-86A1-8BF80681F929}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A17 Ex03 Logic", "A17 Ex03 Logic\A17 Ex03 Logic.csproj", "{9E23192B-2085-4641-8EE1-AFC6459EE700}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6800BBE1-76B7-4402-86A1-8BF80681F929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6800BBE1-76B7-4402-86A1-8BF80681F929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6800BBE1-76B7-4402-86A1-8BF80681F929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6800BBE1-76B7-4402-86A1-8BF80681F929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E23192B-2085-4641-8EE1-AFC6459EE700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E23192B-2085-4641-8EE1-AFC6459EE700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E23192B-2085-4641-8EE1-AFC6459EE700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E23192B-2085-4641-8EE1-AFC6459EE700}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

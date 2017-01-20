@@ -1,0 +1,27 @@
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\A17 Ex01 UI.exe.config
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\A17 Ex01 UI.exe
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\A17 Ex01 UI.pdb
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\A17_Ex01_Logic.dll
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\Facebook.dll
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\FbGraphApiWrapper.dll
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\XAct.Core.PCL.dll
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\XAct.Diagrams.Uml.PlantUml.dll
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\A17_Ex01_Logic.pdb
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17_Ex01_UI.csprojResolveAssemblyReference.cache
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17_Ex01_UI.FormAppHomepage.resources
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17_Ex01_UI.UserControlFilterWall.resources
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17_Ex01_UI.FormImageReaction.resources
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17_Ex01_UI.UserControlImageSearcher.resources
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17_Ex01_UI.UserControlPost.resources
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17_Ex01_UI.Properties.Resources.resources
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17_Ex01_UI.csproj.GenerateResource.Cache
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17 Ex01 UI.exe
+C:\Users\dor\Downloads\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17 Ex01 UI.pdb
+C:\Users\dor\Desktop\New folder\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\bin\Debug\A17 Ex01 UI.exe.config
+C:\Users\dor\Desktop\New folder\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17 Ex01 UI.exe
+C:\Users\dor\Desktop\New folder\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex02 AlmogShoval 305744856 DorHodMaydan 204120869\A17 Ex01_UI\obj\Debug\A17 Ex01 UI.pdb
+C:\Users\dorho\OneDrive\Documents\Visual Studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex01_UI\obj\Debug\A17 Ex01 UI.exe
+C:\Users\dorho\OneDrive\Documents\Visual Studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex01_UI\obj\Debug\A17 Ex01 UI.pdb
