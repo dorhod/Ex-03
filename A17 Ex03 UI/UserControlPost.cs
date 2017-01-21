@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using A17_Ex03_Logic;
 
-namespace A17_Ex01_UI
+namespace A17_Ex03_UI
 {
     public partial class UserControlPost : UserControl
     {

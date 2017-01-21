@@ -22,7 +22,7 @@ namespace A17_Ex01_Logic
             {
                 if (i_SelectedItemsToFilterBy.Count < 1)
                 {
-                    setPhotosByYear(year, i_SelectedItemsToFilterBy);
+                    //setPhotosByYear(year, i_SelectedItemsToFilterBy);
                 }
             }
         }
@@ -32,14 +32,14 @@ namespace A17_Ex01_Logic
             m_FliteredPhotos = new List<Photo>();
            // b_FirstCheck = true; ADD IT ONLY ON USER NAME
 
-            foreach (UserWithPhotos taggedUser in m_PhotosByUserList)
-            {
-                if (i_CheckedItemsTaggedInPhoto.Contains(taggedUser.TaggedUser.Name))
-                {
-                    setPhotosByUserName(taggedUser);
-                }
+            //foreach (UserWithPhotos taggedUser in m_PhotosByUserList)
+           // {
+               // if (i_CheckedItemsTaggedInPhoto.Contains(taggedUser.TaggedUser.Name))
+               // {
+                //    setPhotosByUserName(taggedUser);
+              //  }
 
-            }
+          //  }
         }
     }
 }

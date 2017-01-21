@@ -97,12 +97,12 @@ namespace A17_Ex03_Logic
 
         public void filterPhotosByYear(CheckedListBox.CheckedItemCollection i_CheckedItemsYearOfPhoto)
         {
-            m_PhotosCheckedByUser = new List<Photo>();
 
             foreach (int year in m_PhotosByYearList.Keys)
             {
                 if (i_CheckedItemsYearOfPhoto.Count > 1)
                 {
+                    m_PhotosCheckedByUser = new List<Photo>();
                     //m_PhotosCheckedByUser.Clear();
                 }
                 else

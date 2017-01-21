@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using Facebook;
 using A17_Ex03_Logic;
-using System.Threading;
 
-namespace A17_Ex01_UI
+namespace A17_Ex03_UI
 {
     public partial class UserControlFilterWall : UserControl
     {
-        private readonly FacebookClient     r_FbUser = new FacebookClient(AppSettings.GetSettings().LastAccessToken);
+        private readonly ProxyFaceBookClient r_FbUser = new ProxyFaceBookClient(AppSettings.GetSettings().LastAccessToken);
         private List<WallPost>              m_Posts;
         private int                         m_PostsAmountToDisplay;
 
@@ -21,38 +19,12 @@ namespace A17_Ex01_UI
             m_PostsAmountToDisplay = 10;          
         }
 
-        public void fetchPosts()
+        public void SetPosts()
         {
             try
             {
-                m_Posts = new List<WallPost>();
-
-                JsonObject results = (JsonObject)r_FbUser.Get("me/feed?fields=message,likes{name},comments{from},story,source,created_time,picture,from&limit=10000");
-                JsonArray posts = (JsonArray)results[0];
-                Thread featch = new Thread(() =>
-                {
-                    foreach (JsonObject post in posts)
-                    {
-                        Thread T = new Thread(() =>
-                        {
-                            WallPost newPost = new WallPost(post, r_FbUser);
-                            lock (this)
-                            {
-                                m_Posts.Add(newPost);
-                            }
-
-                        });
-                        T.Start();
-                    }
-
-                    Console.WriteLine("");
-                    
-                });
-
-                featch.Start();
-                featch.Join();
-
-                fatchFeedOrderedByDate();
+                m_Posts = r_FbUser.Get("me/feed?fields=message,likes{name},comments{from},story,source,created_time,picture,from&limit=10000") as List<WallPost>;
+                orderFeedByDate();
             }
             finally
             {
@@ -69,13 +41,13 @@ namespace A17_Ex01_UI
             }
         }
 
-        private void fatchFeedOrderedByLikes()
+        private void orderFeedByLikes()
         {
             IEnumerable<WallPost> orderFeedByLikes = m_Posts.OrderByDescending(post => post.LikeCount);
             setFeed(orderFeedByLikes.ToList());
         }
 
-        private void fatchFeedOrderedByDate()
+        private void orderFeedByDate()
         {
             IEnumerable<WallPost> orderFeedByTime = m_Posts.OrderByDescending(post => post.Time);
             setFeed(orderFeedByTime.ToList());
@@ -96,7 +68,7 @@ namespace A17_Ex01_UI
         {
             if (comboBoxWallFilter.SelectedIndex == 1)
             {
-                fatchFeedOrderedByLikes();
+                orderFeedByLikes();
             }
             else
             {
@@ -106,7 +78,7 @@ namespace A17_Ex01_UI
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
-            fetchPosts();
+            SetPosts();
         }
     }
 }

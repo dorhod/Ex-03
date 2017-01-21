@@ -1,4 +1,4 @@
-﻿namespace A17_Ex01_UI
+﻿namespace A17_Ex03_UI
 {
     partial class UserControlPost
     {

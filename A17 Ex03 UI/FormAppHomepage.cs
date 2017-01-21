@@ -6,19 +6,11 @@ using FacebookWrapper.ObjectModel;
 using A17_Ex03_Logic;
 using System.Threading;
 
-// $G$ RUL-003 (-10) Diagram document should be attached to the solution.
-// $G$ CSS-016 (-15) Bad class name - The name of classes derived from Form should begin with Form.
-// $G$ CSS-999 (-10) StyleCop errors
-// $G$ SFN-001 (-3) Basic facebook experience is poor.
-
-// $G$ THE-001 (-29) your grade on diagrams document - 71. please see comments inside the document. 
-
-namespace A17_Ex01_UI
+namespace A17_Ex03_UI
 {
     public partial class FormAppHomepage : Form
     {
         User m_LoggedInUser;
-        object key;
 
         public FormAppHomepage()
         {
@@ -37,6 +29,7 @@ namespace A17_Ex01_UI
                     checkLoginResult(result);
                 }catch (Exception ex)
                 {
+                    Console.WriteLine(ex);
                     AppSettings.GetSettings().LastAccessToken = null;
                 }
             }
@@ -134,7 +127,7 @@ namespace A17_Ex01_UI
             UserControlFilterWall PageFeed = new UserControlFilterWall();
             tabPageFeed.Controls.Add(PageFeed);
 
-            PageFeed.fetchPosts();
+            PageFeed.SetPosts();
         }
 
         private void fetchUserPhotos(TabPage tabPagePhotos) { 

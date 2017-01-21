@@ -9,3 +9,14 @@ C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 20412
 C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\bin\Debug\A17_Ex01_Logic.pdb
 C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17_Ex03_UI.exe
 C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17_Ex03_UI.pdb
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17 Ex03 UI.csprojResolveAssemblyReference.cache
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17_Ex03_UI.Properties.Resources.resources
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17 Ex03 UI.csproj.GenerateResource.Cache
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\bin\Debug\A17_Ex03_UI.exe
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\bin\Debug\A17_Ex03_UI.pdb
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\bin\Debug\Facebook.dll
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\bin\Debug\FbGraphApiWrapper.dll
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17_Ex03_UI.exe
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17_Ex03_UI.pdb
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\bin\Debug\A17_Ex03_Logic.dll
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\bin\Debug\A17_Ex03_Logic.pdb

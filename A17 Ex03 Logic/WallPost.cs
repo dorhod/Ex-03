@@ -15,7 +15,7 @@ namespace A17_Ex03_Logic
         public string       PictureURL { get; set; }
         public JsonObject   From { get; set; }
 
-        public WallPost(JsonObject i_Post, FacebookClient i_FbUser)
+        public WallPost(JsonObject i_Post)
         {
             From = parseJson<JsonObject>("from", i_Post);
             if(From != null)

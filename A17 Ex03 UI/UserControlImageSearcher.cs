@@ -6,7 +6,7 @@ using FacebookWrapper.ObjectModel;
 using A17_Ex03_Logic;
 using System.Threading;
 
-namespace A17_Ex01_UI
+namespace A17_Ex03_UI
 {
     public partial class UserControlImageSearcher : UserControl
     {
