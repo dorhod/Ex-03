@@ -175,10 +175,12 @@ namespace A17_Ex03_Logic
             {
                 if (i_CheckedItemsTaggedInPhoto.Contains(taggedUser.TaggedUser.Name))
                 {
-                    setPhotosByUserName(taggedUser);
+                    PhotoFilter.setPhotosBy(taggedUser.PhotosOfUser);
                 }
 
             }
+
+            m_PhotosCheckedByUser = PhotoFilter.GetFilteredPhotos();
         }
 
         private void setPhotosByUserName(UserWithPhotos i_TaggedUser)

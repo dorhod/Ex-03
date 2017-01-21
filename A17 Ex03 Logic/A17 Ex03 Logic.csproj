@@ -7,8 +7,8 @@
     <ProjectGuid>{9E23192B-2085-4641-8EE1-AFC6459EE700}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>A17_Ex01_Logic</RootNamespace>
-    <AssemblyName>A17_Ex01_Logic</AssemblyName>
+    <RootNamespace>A17_Ex03_Logic</RootNamespace>
+    <AssemblyName>A17_Ex03_Logic</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
