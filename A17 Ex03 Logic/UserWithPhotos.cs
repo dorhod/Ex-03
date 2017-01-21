@@ -26,6 +26,7 @@ namespace A17_Ex03_Logic
             {
                 this.PhotosOfUser.Add(i_Photo);
             }
+
         }
 
         public Boolean IsPhotoExist(Photo i_Photo)

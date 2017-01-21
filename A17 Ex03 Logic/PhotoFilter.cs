@@ -5,41 +5,60 @@ using System.Linq;
 using System.Text;
 using FacebookWrapper.ObjectModel;
 
-namespace A17_Ex01_Logic
+namespace A17_Ex03_Logic
 {
 
-    class PhotoFilter
+    static class PhotoFilter
     {
 
-        public List<Photo> m_FliteredPhotos;
+        private static List<Photo> m_FliteredPhotos = new List<Photo>();
+        private static Boolean b_FirstCheck = true;
 
 
-        public void filterPhotosByYear<T>(IList<object> i_SelectedItemsToFilterBy, List<T> PhotoList)
+        public static List<Photo> GetFilteredPhotos()
         {
-            m_FliteredPhotos = new List<Photo>();
+            return m_FliteredPhotos;
+        }
 
-            foreach (T Object in PhotoList)
+        public static void setPhotosBy(List<Photo> i_PhotosToAdd)
+        {
+            if (b_FirstCheck == true)
             {
-                if (i_SelectedItemsToFilterBy.Count < 1)
+                addFirstFilter(i_PhotosToAdd);
+;
+            }
+            else
+            {
+                crossFilters(i_PhotosToAdd);
+            }
+
+        }
+
+        private static void addFirstFilter(List<Photo> i_PhotosOfUser)
+        {
+            foreach (Photo photo in i_PhotosOfUser)
+            {
+                if (!m_FliteredPhotos.Contains(photo))
                 {
-                    //setPhotosByYear(year, i_SelectedItemsToFilterBy);
+                    m_FliteredPhotos.Add(photo);
                 }
             }
+            b_FirstCheck = false;
         }
 
-        public void filterPhotosByUserName(CheckedListBox.CheckedItemCollection i_CheckedItemsTaggedInPhoto)
+        private static void crossFilters(List<Photo> i_PhotosToAdd)
         {
-            m_FliteredPhotos = new List<Photo>();
-           // b_FirstCheck = true; ADD IT ONLY ON USER NAME
-
-            //foreach (UserWithPhotos taggedUser in m_PhotosByUserList)
-           // {
-               // if (i_CheckedItemsTaggedInPhoto.Contains(taggedUser.TaggedUser.Name))
-               // {
-                //    setPhotosByUserName(taggedUser);
-              //  }
-
-          //  }
+            List<Photo> newFliteredPhotos = new List<Photo>();
+            foreach (Photo photo in m_FliteredPhotos)
+            {
+                if (i_PhotosToAdd.Contains(photo))
+                {
+                    newFliteredPhotos.Add(photo);
+                }
+            }
+            m_FliteredPhotos = newFliteredPhotos;
         }
+
+
     }
 }
