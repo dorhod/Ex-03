@@ -17,23 +17,10 @@ namespace A17_Ex03_UI
         public UserControlImageSearcher(User i_LoggedUser)
         {
             InitializeComponent();
+            labelYearError.Hide();
+            labelSelectedPhotoError.Hide();
             m_LoggedInUser = i_LoggedUser;
             m_ImageSearcherLogicItem = new ImageSearcherLogic(i_LoggedUser);
-        }
-
-        public void GetPhotosFromUser(User i_CurrentUser)
-        {
-            List<Photo> userPhotos = new List<Photo>();
-
-            foreach (Album album in i_CurrentUser.Albums)
-            {
-                userPhotos.AddRange(album.Photos);
-            }
-
-            userPhotos.AddRange(i_CurrentUser.PhotosTaggedIn);
-
-
-            m_UserPhotos = userPhotos;
         }
 
         private void buttonSearchPhotos_Click(object sender, EventArgs e)
@@ -41,9 +28,17 @@ namespace A17_Ex03_UI
             listViewPhotoDisplay.Clear();
             imageListFromUser.Dispose();
 
-            m_ImageSearcherLogicItem.filterPhotosByUserName(checkBoxUserTaggedWith.CheckedItems);
-            m_ImageSearcherLogicItem.filterPhotosByYear(checkedListBoxYearOfPhoto.CheckedItems);
-            setPhotosToDisplay(m_ImageSearcherLogicItem.m_PhotosCheckedByUser);
+            if (checkedListBoxYearOfPhoto.CheckedItems.Count > 1)
+            {
+                labelYearError.Show();
+            }
+            else
+            {
+                labelYearError.Hide();
+                m_ImageSearcherLogicItem.filterPhotosByUserName(checkBoxUserTaggedWith.CheckedItems);
+                m_ImageSearcherLogicItem.filterPhotosByYear(checkedListBoxYearOfPhoto.CheckedItems);
+                showPhotos(m_ImageSearcherLogicItem.m_PhotosCheckedByUser);
+            }
         }
 
         private void createControll()
@@ -119,8 +114,17 @@ namespace A17_Ex03_UI
 
         private void buttonOpenSelectedPhoto_Click(object sender, EventArgs e)
         {
-            FormImageReaction newImageReaction = new FormImageReaction(r_PhotosDisplayed.ElementAt(listViewPhotoDisplay.SelectedIndices[0]));
-            newImageReaction.Show();
+            if (listViewPhotoDisplay.SelectedItems.Count == 0)
+            {
+                labelSelectedPhotoError.Show();
+            }
+            else
+            {
+                labelSelectedPhotoError.Hide();
+                FormImageReaction newImageReaction = new FormImageReaction(r_PhotosDisplayed.ElementAt(listViewPhotoDisplay.SelectedIndices[0]));
+                newImageReaction.Show();
+            }
+
         }
 
     }

@@ -20,3 +20,4 @@ C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\bin
 C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\bin\Debug\A17_Ex03_Logic.pdb
 C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\bin\Debug\A17_Ex03_Logic.dll
 C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\bin\Debug\A17_Ex03_Logic.pdb
+C:\Users\dorho\onedrive\documents\visual studio 2015\Projects\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17_Ex03_UI.UserControlImageSearcher.resources

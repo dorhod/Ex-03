@@ -39,23 +39,19 @@ namespace A17_Ex03_Logic
 
             foreach (int year in photosHolderByYears.m_PhotosByList.Keys)
             {
-                if (i_CheckedItemsYearOfPhoto.Count > 1)
-                {
-                    //m_PhotosCheckedByUser = new List<Photo>();
-                    m_PhotosCheckedByUser.Clear();
-                }
-                else
                 {
                     if (i_CheckedItemsYearOfPhoto.Contains(year))
                     {
-                        setPhotosByYear(year);
+                        PhotoFilter.setPhotosBy(m_PhotosByYearList[year]);
                     }
                 }
             }
+            m_PhotosCheckedByUser = PhotoFilter.GetFilteredPhotos();
         }
 
         private void setPhotosByYear(int i_Year)
         {
+
                 if (b_FirstCheck == true)
                 {
                     foreach (Photo photo in m_PhotosByYearList[i_Year])
@@ -70,8 +66,10 @@ namespace A17_Ex03_Logic
                 else
                 {
                     deletePhotos(i_Year);
-                }   
+                }
+            
         }
+
 
         private void addUserPhotos(List<Photo> i_PhotosOfUser)
         {
@@ -123,7 +121,7 @@ namespace A17_Ex03_Logic
         {
             if (b_FirstCheck == true)
             {
-                addUserPhotos(i_TaggedUser.UserPhotos);
+                addUserPhotos(i_TaggedUser.PhotosOfUser);
             }
             else
             {
@@ -131,17 +129,5 @@ namespace A17_Ex03_Logic
             }
         }
 
-        private void crossUsersPhotos(UserWithPhotos i_TaggedUser)
-        {
-            List<Photo> newPhotoCheckedByUser = new List<Photo>();
-            foreach (Photo photo in m_PhotosCheckedByUser)
-            {
-                if (i_TaggedUser.IsPhotoExist(photo) == true)
-                {
-                    newPhotoCheckedByUser.Add(photo);
-                }
-            }
-            m_PhotosCheckedByUser = newPhotoCheckedByUser;
-        }
     }
 }

@@ -38,6 +38,8 @@
             this.labelYearOfPhotos = new System.Windows.Forms.Label();
             this.labelUserInPhoto = new System.Windows.Forms.Label();
             this.labelHeadLine = new System.Windows.Forms.Label();
+            this.labelYearError = new System.Windows.Forms.Label();
+            this.labelSelectedPhotoError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // checkBoxUserTaggedWith
@@ -133,10 +135,34 @@
             this.labelHeadLine.TabIndex = 19;
             this.labelHeadLine.Text = "Filter Your Images Here!";
             // 
-            // ImageSearcher
+            // labelYearError
+            // 
+            this.labelYearError.AutoSize = true;
+            this.labelYearError.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelYearError.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelYearError.Location = new System.Drawing.Point(15, 499);
+            this.labelYearError.Name = "labelYearError";
+            this.labelYearError.Size = new System.Drawing.Size(223, 17);
+            this.labelYearError.TabIndex = 20;
+            this.labelYearError.Text = "Please choose only one year.";
+            // 
+            // labelSelectedPhotoError
+            // 
+            this.labelSelectedPhotoError.AutoSize = true;
+            this.labelSelectedPhotoError.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelSelectedPhotoError.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelSelectedPhotoError.Location = new System.Drawing.Point(662, 499);
+            this.labelSelectedPhotoError.Name = "labelSelectedPhotoError";
+            this.labelSelectedPhotoError.Size = new System.Drawing.Size(179, 17);
+            this.labelSelectedPhotoError.TabIndex = 21;
+            this.labelSelectedPhotoError.Text = "Please choose a photo.";
+            // 
+            // UserControlImageSearcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelSelectedPhotoError);
+            this.Controls.Add(this.labelYearError);
             this.Controls.Add(this.labelHeadLine);
             this.Controls.Add(this.labelUserInPhoto);
             this.Controls.Add(this.labelYearOfPhotos);
@@ -146,7 +172,7 @@
             this.Controls.Add(this.listViewPhotoDisplay);
             this.Controls.Add(this.checkBoxUserTaggedWith);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "ImageSearcher";
+            this.Name = "UserControlImageSearcher";
             this.Size = new System.Drawing.Size(983, 536);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,5 +190,7 @@
         private System.Windows.Forms.Label labelYearOfPhotos;
         private System.Windows.Forms.Label labelUserInPhoto;
         private System.Windows.Forms.Label labelHeadLine;
+        private System.Windows.Forms.Label labelYearError;
+        private System.Windows.Forms.Label labelSelectedPhotoError;
     }
 }
