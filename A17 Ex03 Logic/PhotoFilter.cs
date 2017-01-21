@@ -13,11 +13,11 @@ namespace A17_Ex03_Logic
         private static PhotoFilter instance;
 
         private List<Photo> m_FliteredPhotos;
-        private Boolean b_FirstCheck { get; set; }
+        public Boolean b_FirstCheck { get; set; }
 
 
         private PhotoFilter() {
-            this.m_FliteredPhotos = new List<Photo>;
+            this.m_FliteredPhotos = new List<Photo>();
             b_FirstCheck = true;
         }
 
@@ -34,7 +34,12 @@ namespace A17_Ex03_Logic
             }
         }
 
-        public static void setPhotosBy(List<Photo> i_PhotosToAdd)
+        public List<Photo> GetFilteredPhotos()
+        {
+            return m_FliteredPhotos;
+        }
+
+        public void setPhotosBy(List<Photo> i_PhotosToAdd)
         {
             if (b_FirstCheck == true)
             {
@@ -49,7 +54,7 @@ namespace A17_Ex03_Logic
 
         }
 
-        private static void addFirstFilter(List<Photo> i_PhotosOfUser)
+        private void addFirstFilter(List<Photo> i_PhotosOfUser)
         {
             foreach (Photo photo in i_PhotosOfUser)
             {
@@ -61,7 +66,7 @@ namespace A17_Ex03_Logic
             b_FirstCheck = false;
         }
 
-        private static void crossFilters(List<Photo> i_PhotosToAdd)
+        private void crossFilters(List<Photo> i_PhotosToAdd)
         {
             List<Photo> newFliteredPhotos = new List<Photo>();
             foreach (Photo photo in m_FliteredPhotos)

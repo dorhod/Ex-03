@@ -102,28 +102,28 @@ namespace A17_Ex03_Logic
                 {
                     if (i_CheckedItemsYearOfPhoto.Contains(year))
                     {
-                        PhotoFilter.setPhotosBy(m_PhotosByYearList[year]);
+                        PhotoFilter.Instance.setPhotosBy(m_PhotosByYearList[year]);
                     }
                 }
             }
-            m_PhotosCheckedByUser = PhotoFilter.GetFilteredPhotos();
+            m_PhotosCheckedByUser = PhotoFilter.Instance.GetFilteredPhotos();
         }
 
         public void filterPhotosByUserName(CheckedListBox.CheckedItemCollection i_CheckedItemsTaggedInPhoto)
         {
             m_PhotosCheckedByUser = new List<Photo>();
-            PhotoFilter.b_FirstCheck = true;
+            PhotoFilter.Instance.b_FirstCheck = true;
 
             foreach (UserWithPhotos taggedUser in m_PhotosByUserList)
             {
                 if (i_CheckedItemsTaggedInPhoto.Contains(taggedUser.TaggedUser.Name))
                 {
-                    PhotoFilter.setPhotosBy(taggedUser.PhotosOfUser);
+                    PhotoFilter.Instance.setPhotosBy(taggedUser.PhotosOfUser);
                 }
 
             }
 
-            m_PhotosCheckedByUser = PhotoFilter.GetFilteredPhotos();
+            m_PhotosCheckedByUser = PhotoFilter.Instance.GetFilteredPhotos();
         }
 
     }
