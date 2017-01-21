@@ -35,6 +35,8 @@ namespace A17_Ex01_UI
         private void showAllPicturesOfMainUser()
         {
             showPhotos(m_ImageSearcherLogicItem.fetchAllPicturesOfMainUser(m_LoggedInUser));
+            createListOfYears();
+            createListOfUsers();
         }
 
         private void showPhotos(List<Photo> i_Photolist)
@@ -76,15 +78,14 @@ namespace A17_Ex01_UI
                 item.ImageIndex = j;
                 this.listViewPhotoDisplay.Items.Add(item);
             }
-            createListOfYears();
-            createListOfUsers();
-
         }
 
         private void createListOfYears()
         {
             // Create a list of years that has photos
             List<int> yearsOfPhotos = m_ImageSearcherLogicItem.m_PhotosByYearList.Keys.ToList();
+            checkedListBoxYearOfPhoto.Items.Clear();
+
             foreach (int yearOfPhoto in yearsOfPhotos)
             {
                 checkedListBoxYearOfPhoto.Items.Add(yearOfPhoto);

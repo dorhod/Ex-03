@@ -40,6 +40,7 @@ namespace A17_Ex03_Logic
             foreach (Photo photo in i_Photos)
             {
                 m_AllPhotosList.Add(photo);
+
                 // Create a list of years that has photos
                 if (!m_PhotosByYearList.ContainsKey(photo.CreatedTime.GetValueOrDefault().Year))
                 {
@@ -96,20 +97,22 @@ namespace A17_Ex03_Logic
 
         public void filterPhotosByYear(CheckedListBox.CheckedItemCollection i_CheckedItemsYearOfPhoto)
         {
+            m_PhotosCheckedByUser = new List<Photo>();
+
             foreach (int year in m_PhotosByYearList.Keys)
             {
                 if (i_CheckedItemsYearOfPhoto.Count > 1)
                 {
-                    m_PhotosCheckedByUser.Clear();
+                    //m_PhotosCheckedByUser.Clear();
                 }
                 else
                 {
-                    fetchYearPhotos(year, i_CheckedItemsYearOfPhoto);
+                    setPhotosByYear(year, i_CheckedItemsYearOfPhoto);
                 }
             }
         }
 
-        private void fetchYearPhotos(int i_Year, CheckedListBox.CheckedItemCollection i_CheckedItemsYearOfPhoto)
+        private void setPhotosByYear(int i_Year, CheckedListBox.CheckedItemCollection i_CheckedItemsYearOfPhoto)
         {
             if (i_CheckedItemsYearOfPhoto.Contains(i_Year))
             {
@@ -126,9 +129,22 @@ namespace A17_Ex03_Logic
                 }
                 else
                 {
-                    deletePhotos(i_Year);
+                    //deletePhotos(i_Year);
                 }
             }
+        }
+
+
+        private void addUserPhotos(List<Photo> i_PhotosOfUser)
+        {
+            foreach (Photo photo in i_PhotosOfUser)
+            {
+                if (!m_PhotosCheckedByUser.Contains(photo))
+                {
+                    m_PhotosCheckedByUser.Add(photo);
+                }
+            }
+            b_FirstCheck = false;
         }
 
         private void deletePhotos(int i_Year)
@@ -157,13 +173,13 @@ namespace A17_Ex03_Logic
             {
                 if (i_CheckedItemsTaggedInPhoto.Contains(taggedUser.TaggedUser.Name))
                 {
-                    fetchUserPhotos(taggedUser);
+                    setPhotosByUserName(taggedUser);
                 }
 
             }
         }
 
-        private void fetchUserPhotos(UserWithPhotos i_TaggedUser)
+        private void setPhotosByUserName(UserWithPhotos i_TaggedUser)
         {
             if (b_FirstCheck == true)
             {
@@ -173,18 +189,6 @@ namespace A17_Ex03_Logic
             {
                 crossUsersPhotos(i_TaggedUser);
             }
-        }
-
-        private void addUserPhotos(List<Photo> i_PhotosOfUser)
-        {
-            foreach (Photo photo in i_PhotosOfUser)
-            {
-                if (!m_PhotosCheckedByUser.Contains(photo))
-                {
-                    m_PhotosCheckedByUser.Add(photo);
-                }
-            }
-            b_FirstCheck = false;
         }
 
         private void crossUsersPhotos(UserWithPhotos i_TaggedUser)
