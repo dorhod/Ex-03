@@ -9,7 +9,7 @@ namespace A17_Ex01_Logic
     {
         public void filterPhotosByYear(CheckedListBox.CheckedItemCollection i_CheckedItemsYearOfPhoto)
         {
-            m_PhotosCheckedByUser = new List<Photo>();
+            m_PhotosCheckedByUser = new List<Photo>(); ;
 
             foreach (int year in m_PhotosByYearList.Keys)
             {
