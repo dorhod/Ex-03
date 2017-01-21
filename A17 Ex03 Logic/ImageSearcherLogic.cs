@@ -41,7 +41,7 @@ namespace A17_Ex03_Logic
                 {
                     if (i_CheckedItemsYearOfPhoto.Contains(year))
                     {
-                        PhotoFilter.Instance.setPhotosBy(m_PhotosByYearList[year]);
+                        PhotoFilter.Instance.setPhotosBy(photosHolderByYears.m_PhotosByList[year]);
                     }
                 }
             }
@@ -53,11 +53,11 @@ namespace A17_Ex03_Logic
             m_PhotosCheckedByUser = new List<Photo>();
             PhotoFilter.Instance.b_FirstCheck = true;
 
-            foreach (UserWithPhotos taggedUser in m_PhotosByUserList)
+            foreach (User taggedUser in photosHolderByUsers.m_PhotosByList.Keys)
             {
-                if (i_CheckedItemsTaggedInPhoto.Contains(taggedUser.CurrentUser.Name))
+                if (i_CheckedItemsTaggedInPhoto.Contains(taggedUser.Name))
                 {
-                    PhotoFilter.Instance.setPhotosBy(taggedUser.PhotosOfUser);
+                    PhotoFilter.Instance.setPhotosBy(photosHolderByUsers.m_PhotosByList[taggedUser]);
                 }
 
             }

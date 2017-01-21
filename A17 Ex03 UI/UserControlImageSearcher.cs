@@ -21,6 +21,7 @@ namespace A17_Ex03_UI
             labelSelectedPhotoError.Hide();
             m_LoggedInUser = i_LoggedUser;
             m_ImageSearcherLogicItem = new ImageSearcherLogic(i_LoggedUser);
+            createControl();
         }
 
         private void buttonSearchPhotos_Click(object sender, EventArgs e)
