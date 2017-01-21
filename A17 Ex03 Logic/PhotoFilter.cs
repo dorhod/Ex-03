@@ -8,16 +8,30 @@ using FacebookWrapper.ObjectModel;
 namespace A17_Ex03_Logic
 {
 
-    static class PhotoFilter
+     public class PhotoFilter
     {
+        private static PhotoFilter instance;
 
-        private static List<Photo> m_FliteredPhotos = new List<Photo>();
-        public static Boolean b_FirstCheck = true;
+        private List<Photo> m_FliteredPhotos;
+        private Boolean b_FirstCheck { get; set; }
 
 
-        public static List<Photo> GetFilteredPhotos()
+        private PhotoFilter() {
+            this.m_FliteredPhotos = new List<Photo>;
+            b_FirstCheck = true;
+        }
+
+
+        public static PhotoFilter Instance
         {
-            return m_FliteredPhotos;
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new PhotoFilter();
+                }
+                return instance;
+            }
         }
 
         public static void setPhotosBy(List<Photo> i_PhotosToAdd)

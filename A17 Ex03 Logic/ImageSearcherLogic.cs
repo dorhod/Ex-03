@@ -97,73 +97,16 @@ namespace A17_Ex03_Logic
 
         public void filterPhotosByYear(CheckedListBox.CheckedItemCollection i_CheckedItemsYearOfPhoto)
         {
-
             foreach (int year in m_PhotosByYearList.Keys)
             {
-                if (i_CheckedItemsYearOfPhoto.Count > 1)
-                {
-                    //m_PhotosCheckedByUser = new List<Photo>();
-                    m_PhotosCheckedByUser.Clear();
-                }
-                else
                 {
                     if (i_CheckedItemsYearOfPhoto.Contains(year))
                     {
-                        setPhotosByYear(year);
+                        PhotoFilter.setPhotosBy(m_PhotosByYearList[year]);
                     }
                 }
             }
-        }
-
-        private void setPhotosByYear(int i_Year)
-        {
-
-                if (b_FirstCheck == true)
-                {
-                    foreach (Photo photo in m_PhotosByYearList[i_Year])
-                    {
-                        if (!m_PhotosCheckedByUser.Contains(photo))
-                        {
-                            m_PhotosCheckedByUser.Add(photo);
-                        }
-                    }
-                    b_FirstCheck = false;
-                }
-                else
-                {
-                    deletePhotos(i_Year);
-                }
-            
-        }
-
-
-        private void addUserPhotos(List<Photo> i_PhotosOfUser)
-        {
-            foreach (Photo photo in i_PhotosOfUser)
-            {
-                if (!m_PhotosCheckedByUser.Contains(photo))
-                {
-                    m_PhotosCheckedByUser.Add(photo);
-                }
-            }
-            b_FirstCheck = false;
-        }
-
-        private void deletePhotos(int i_Year)
-        {
-            List<Photo> photosToDelete = new List<Photo>();
-            foreach (Photo photo in m_PhotosCheckedByUser)
-            {
-                if (photo.CreatedTime.GetValueOrDefault().Year != i_Year)
-                {
-                    photosToDelete.Add(photo);
-                }
-            }
-
-            foreach (Photo photo in photosToDelete)
-            {
-                m_PhotosCheckedByUser.Remove(photo);
-            }
+            m_PhotosCheckedByUser = PhotoFilter.GetFilteredPhotos();
         }
 
         public void filterPhotosByUserName(CheckedListBox.CheckedItemCollection i_CheckedItemsTaggedInPhoto)
@@ -183,29 +126,5 @@ namespace A17_Ex03_Logic
             m_PhotosCheckedByUser = PhotoFilter.GetFilteredPhotos();
         }
 
-        private void setPhotosByUserName(UserWithPhotos i_TaggedUser)
-        {
-            if (b_FirstCheck == true)
-            {
-                addUserPhotos(i_TaggedUser.PhotosOfUser);
-            }
-            else
-            {
-                crossUsersPhotos(i_TaggedUser);
-            }
-        }
-
-        private void crossUsersPhotos(UserWithPhotos i_TaggedUser)
-        {
-            List<Photo> newPhotoCheckedByUser = new List<Photo>();
-            foreach (Photo photo in m_PhotosCheckedByUser)
-            {
-                if (i_TaggedUser.IsPhotoExist(photo) == true)
-                {
-                    newPhotoCheckedByUser.Add(photo);
-                }
-            }
-            m_PhotosCheckedByUser = newPhotoCheckedByUser;
-        }
     }
 }
