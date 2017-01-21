@@ -1,33 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using System.Linq;
 using System.Text;
+using FacebookWrapper.ObjectModel;
 
 namespace A17_Ex01_Logic
 {
+
     class PhotoFilter
     {
-        public void filterPhotosByYear(CheckedListBox.CheckedItemCollection i_CheckedItemsYearOfPhoto)
-        {
-            m_PhotosCheckedByUser = new List<Photo>();
 
-            foreach (int year in m_PhotosByYearList.Keys)
+        public List<Photo> m_FliteredPhotos;
+
+
+        public void filterPhotosByYear<T>(IList<object> i_SelectedItemsToFilterBy, List<T> PhotoList)
+        {
+            m_FliteredPhotos = new List<Photo>();
+
+            foreach (T Object in PhotoList)
             {
-                if (i_CheckedItemsYearOfPhoto.Count > 1)
+                if (i_SelectedItemsToFilterBy.Count < 1)
                 {
-                    //m_PhotosCheckedByUser.Clear();
-                }
-                else
-                {
-                    setPhotosByYear(year, i_CheckedItemsYearOfPhoto);
+                    setPhotosByYear(year, i_SelectedItemsToFilterBy);
                 }
             }
         }
 
         public void filterPhotosByUserName(CheckedListBox.CheckedItemCollection i_CheckedItemsTaggedInPhoto)
         {
-            m_PhotosCheckedByUser = new List<Photo>();
-            b_FirstCheck = true;
+            m_FliteredPhotos = new List<Photo>();
+           // b_FirstCheck = true; ADD IT ONLY ON USER NAME
 
             foreach (UserWithPhotos taggedUser in m_PhotosByUserList)
             {

@@ -107,15 +107,17 @@ namespace A17_Ex03_Logic
                 }
                 else
                 {
-                    setPhotosByYear(year, i_CheckedItemsYearOfPhoto);
+                    if (i_CheckedItemsYearOfPhoto.Contains(year))
+                    {
+                        setPhotosByYear(year);
+                    }
                 }
             }
         }
 
-        private void setPhotosByYear(int i_Year, CheckedListBox.CheckedItemCollection i_CheckedItemsYearOfPhoto)
+        private void setPhotosByYear(int i_Year)
         {
-            if (i_CheckedItemsYearOfPhoto.Contains(i_Year))
-            {
+
                 if (b_FirstCheck == true)
                 {
                     foreach (Photo photo in m_PhotosByYearList[i_Year])
@@ -131,7 +133,7 @@ namespace A17_Ex03_Logic
                 {
                     //deletePhotos(i_Year);
                 }
-            }
+            
         }
 
 
