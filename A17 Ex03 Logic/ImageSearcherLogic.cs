@@ -169,7 +169,7 @@ namespace A17_Ex03_Logic
         public void filterPhotosByUserName(CheckedListBox.CheckedItemCollection i_CheckedItemsTaggedInPhoto)
         {
             m_PhotosCheckedByUser = new List<Photo>();
-            b_FirstCheck = true;
+            PhotoFilter.b_FirstCheck = true;
 
             foreach (UserWithPhotos taggedUser in m_PhotosByUserList)
             {
