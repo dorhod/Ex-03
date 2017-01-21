@@ -21,7 +21,6 @@ namespace A17_Ex03_UI
             labelSelectedPhotoError.Hide();
             m_LoggedInUser = i_LoggedUser;
             m_ImageSearcherLogicItem = new ImageSearcherLogic(i_LoggedUser);
-            showAllPicturesOfMainUser();
         }
 
         private void buttonSearchPhotos_Click(object sender, EventArgs e)
@@ -38,18 +37,18 @@ namespace A17_Ex03_UI
                 labelYearError.Hide();
                 m_ImageSearcherLogicItem.filterPhotosByUserName(checkBoxUserTaggedWith.CheckedItems);
                 m_ImageSearcherLogicItem.filterPhotosByYear(checkedListBoxYearOfPhoto.CheckedItems);
-                showPhotos(m_ImageSearcherLogicItem.m_PhotosCheckedByUser);
+                setPhotosToDisplay(m_ImageSearcherLogicItem.m_PhotosCheckedByUser);
             }
         }
 
-        private void showAllPicturesOfMainUser()
+        private void createControl()
         {
-            showPhotos(m_ImageSearcherLogicItem.fetchAllPicturesOfMainUser(m_LoggedInUser));
-            createListOfYears();
-            createListOfUsers();
+            setPhotosToDisplay(m_ImageSearcherLogicItem.m_UserPhotos);
+            setYearsList();
+            setUsersList();
         }
 
-        private void showPhotos(List<Photo> i_Photolist)
+        private void setPhotosToDisplay(List<Photo> i_Photolist)
         {
             r_PhotosDisplayed.Clear();
 
@@ -90,10 +89,10 @@ namespace A17_Ex03_UI
             }
         }
 
-        private void createListOfYears()
+        private void setYearsList()
         {
             // Create a list of years that has photos
-            List<int> yearsOfPhotos = m_ImageSearcherLogicItem.m_PhotosByYearList.Keys.ToList();
+            List<int> yearsOfPhotos = m_ImageSearcherLogicItem.photosHolderByYears.m_PhotosByList.Keys.ToList();
             checkedListBoxYearOfPhoto.Items.Clear();
 
             foreach (int yearOfPhoto in yearsOfPhotos)
@@ -102,16 +101,14 @@ namespace A17_Ex03_UI
             }
         }
 
-        private void createListOfUsers()
+        private void setUsersList()
         {
-            foreach (PhotoTag phototag in m_ImageSearcherLogicItem.m_ListOfTaggedUsers)
-            {
-                string taggedUserName = phototag.User.Name;
-                if (!checkBoxUserTaggedWith.Items.Contains(taggedUserName))
-                {
-                    checkBoxUserTaggedWith.Items.Add(taggedUserName);
-                }
+            List<User> usersList = m_ImageSearcherLogicItem.photosHolderByUsers.m_PhotosByList.Keys.ToList();
+            checkBoxUserTaggedWith.Items.Clear();
 
+            foreach (User user in usersList)
+            {
+                    checkBoxUserTaggedWith.Items.Add(user.Name);
             }
         }
 
