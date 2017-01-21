@@ -6,9 +6,9 @@ using FacebookWrapper.ObjectModel;
 
 namespace A17_Ex03_Logic
 {
-    public class PhotosHolderByUsersBuilder : IPhotosHolderBuilder<User>
+    public class PhotosHolderByUsersBuilder : IPhotosHolderBuilder<String>
     {
-        private PhotosHolder<User> photosHolderByUser = new PhotosHolder<User>();
+        private PhotosHolder<String> photosHolderByUser = new PhotosHolder<String>();
 
         public void AddPhotosToList(List<Photo> i_Photos)
         {
@@ -20,7 +20,7 @@ namespace A17_Ex03_Logic
                 {
                     foreach (PhotoTag photoTag in photoTags)
                     {
-                        photosHolderByUser.m_PhotosByList[photoTag.User].Add(photo);
+                        photosHolderByUser.m_PhotosByList[photoTag.User.Name].Add(photo);
                     }
                 }
             }
@@ -28,7 +28,7 @@ namespace A17_Ex03_Logic
 
         public void CreateList(List<Photo> i_Photos)
         {
-            Dictionary<User, List<Photo>> photosByUserList = new Dictionary<User, List<Photo>>();
+            Dictionary<String, List<Photo>> photosByUserList = new Dictionary<String, List<Photo>>();
 
             foreach (Photo photo in i_Photos)
             {
@@ -38,9 +38,9 @@ namespace A17_Ex03_Logic
                 {
                     foreach (PhotoTag photoTag in photoTags)
                     {
-                        if (!photosByUserList.ContainsKey(photoTag.User))
+                        if (!photosByUserList.ContainsKey(photoTag.User.Name))
                         {
-                            photosByUserList.Add(photoTag.User, new List<Photo>());
+                            photosByUserList.Add(photoTag.User.Name, new List<Photo>());
                         }
                     }
                 }
@@ -49,7 +49,7 @@ namespace A17_Ex03_Logic
             photosHolderByUser.m_PhotosByList = photosByUserList;
         }
 
-        public PhotosHolder<User> GetPhotosHolderFrom(List<Photo> i_Photos)
+        public PhotosHolder<String> GetPhotosHolderFrom(List<Photo> i_Photos)
         {
             CreateList(i_Photos);
             AddPhotosToList(i_Photos);

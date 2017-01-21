@@ -11,7 +11,7 @@ namespace A17_Ex03_Logic
         public List<Photo> m_PhotosCheckedByUser;
         public List<Photo> m_UserPhotos = new List<Photo>();
         public PhotosHolder<int> photosHolderByYears;
-        public PhotosHolder<User> photosHolderByUsers;
+        public PhotosHolder<String> photosHolderByUsers;
 
         public ImageSearcherLogic(User i_LoggedInUser)
         {
@@ -53,11 +53,11 @@ namespace A17_Ex03_Logic
             m_PhotosCheckedByUser = new List<Photo>();
             PhotoFilter.Instance.b_FirstCheck = true;
 
-            foreach (User taggedUser in photosHolderByUsers.m_PhotosByList.Keys)
+            foreach (String userName in photosHolderByUsers.m_PhotosByList.Keys)
             {
-                if (i_CheckedItemsTaggedInPhoto.Contains(taggedUser.Name))
+                if (i_CheckedItemsTaggedInPhoto.Contains(userName))
                 {
-                    PhotoFilter.Instance.setPhotosBy(photosHolderByUsers.m_PhotosByList[taggedUser]);
+                    PhotoFilter.Instance.setPhotosBy(photosHolderByUsers.m_PhotosByList[userName]);
                 }
 
             }

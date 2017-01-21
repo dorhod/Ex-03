@@ -65,12 +65,12 @@ namespace A17_Ex03_UI
                         lock (this)
                         {
                             sy.Add(newPhoto);
+                            r_PhotosDisplayed.Add(photo);
                         }
 
                     });
                     T.Start();
-
-                    r_PhotosDisplayed.Add(photo);
+                    T.Join();
                 }
             });
 
@@ -104,12 +104,10 @@ namespace A17_Ex03_UI
 
         private void setUsersList()
         {
-            List<User> usersList = m_ImageSearcherLogicItem.photosHolderByUsers.m_PhotosByList.Keys.ToList();
             checkBoxUserTaggedWith.Items.Clear();
-
-            foreach (User user in usersList)
+            foreach (String userName in m_ImageSearcherLogicItem.photosHolderByUsers.m_PhotosByList.Keys)
             {
-                    checkBoxUserTaggedWith.Items.Add(user.Name);
+                    checkBoxUserTaggedWith.Items.Add(userName);
             }
         }
 
