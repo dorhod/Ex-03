@@ -24,6 +24,7 @@ namespace A17_Ex03_Logic
         {
             if (b_FirstCheck == true)
             {
+                m_FliteredPhotos.Clear();
                 addFirstFilter(i_PhotosToAdd);
 ;
             }

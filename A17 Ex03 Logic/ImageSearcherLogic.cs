@@ -102,8 +102,8 @@ namespace A17_Ex03_Logic
             {
                 if (i_CheckedItemsYearOfPhoto.Count > 1)
                 {
-                    m_PhotosCheckedByUser = new List<Photo>();
-                    //m_PhotosCheckedByUser.Clear();
+                    //m_PhotosCheckedByUser = new List<Photo>();
+                    m_PhotosCheckedByUser.Clear();
                 }
                 else
                 {
@@ -131,7 +131,7 @@ namespace A17_Ex03_Logic
                 }
                 else
                 {
-                    //deletePhotos(i_Year);
+                    deletePhotos(i_Year);
                 }
             
         }
