@@ -12,7 +12,7 @@ namespace A17_Ex03_Logic
     {
 
         private static List<Photo> m_FliteredPhotos = new List<Photo>();
-        private static Boolean b_FirstCheck = true;
+        public static Boolean b_FirstCheck = true;
 
 
         public static List<Photo> GetFilteredPhotos()
@@ -24,6 +24,7 @@ namespace A17_Ex03_Logic
         {
             if (b_FirstCheck == true)
             {
+                m_FliteredPhotos.Clear();
                 addFirstFilter(i_PhotosToAdd);
 ;
             }
