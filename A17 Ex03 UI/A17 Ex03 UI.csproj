@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="comments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="comments.Designer.cs">
+      <DependentUpon>comments.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAppHomepage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,15 @@
     <Compile Include="UserControlPost.Designer.cs">
       <DependentUpon>UserControlPost.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="comments.resx">
+      <DependentUpon>comments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAppHomepage.resx">
+      <DependentUpon>FormAppHomepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImageReaction.resx">
+      <DependentUpon>FormImageReaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -95,6 +110,8 @@
     <EmbeddedResource Include="UserControlImageSearcher.resx">
       <DependentUpon>UserControlImageSearcher.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Comment.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

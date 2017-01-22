@@ -13,6 +13,10 @@ namespace A17_Ex03_UI
         {
             InitializeComponent();
             m_CurrentPicture = i_SelectedPhotoFromUser;
+            if (m_CurrentPicture.Comments != null)
+            {
+                commentBindingSource.DataSource = m_CurrentPicture.Comments;
+            }
             displayPhoto();
         }
 

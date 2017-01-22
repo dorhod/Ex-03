@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="comment.cs" />
     <Compile Include="IPhotoHolderBuilder.cs" />
     <Compile Include="PhotosHolder.cs" />
     <Compile Include="PhotosHolderByYearsBuilder.cs" />

@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.pictureBoxColoredBlockTop = new System.Windows.Forms.PictureBox();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.pictureBoxProfilPicture = new System.Windows.Forms.PictureBox();
             this.tabControlFeatureViewer = new System.Windows.Forms.TabControl();
+            this.photoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColoredBlockTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.photoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLogin
@@ -78,25 +81,31 @@
             this.tabControlFeatureViewer.Location = new System.Drawing.Point(30, 196);
             this.tabControlFeatureViewer.Name = "tabControlFeatureViewer";
             this.tabControlFeatureViewer.SelectedIndex = 0;
-            this.tabControlFeatureViewer.Size = new System.Drawing.Size(1600, 930);
+            this.tabControlFeatureViewer.Size = new System.Drawing.Size(1578, 930);
             this.tabControlFeatureViewer.TabIndex = 15;
             // 
-            // AppHomepage
+            // photoBindingSource
+            // 
+            this.photoBindingSource.DataSource = typeof(FacebookWrapper.ObjectModel.Photo);
+            // 
+            // FormAppHomepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1723, 1133);
+            this.ClientSize = new System.Drawing.Size(1627, 1543);
             this.Controls.Add(this.tabControlFeatureViewer);
             this.Controls.Add(this.pictureBoxProfilPicture);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.pictureBoxColoredBlockTop);
             this.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "AppHomepage";
+            this.Name = "FormAppHomepage";
             this.Text = "Homepage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColoredBlockTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.photoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,6 +116,7 @@
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.PictureBox pictureBoxProfilPicture;
         private System.Windows.Forms.TabControl tabControlFeatureViewer;
+        private System.Windows.Forms.BindingSource photoBindingSource;
     }
 }
 

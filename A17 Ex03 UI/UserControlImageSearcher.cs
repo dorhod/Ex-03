@@ -5,14 +5,16 @@ using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using A17_Ex03_Logic;
 using System.Threading;
+using System.Data;
+using System.Drawing;
 
 namespace A17_Ex03_UI
 {
     public partial class UserControlImageSearcher : UserControl
     {
-        readonly List<Photo>        r_PhotosDisplayed = new List<Photo>();
-        private ImageSearcherLogic  m_ImageSearcherLogicItem;
-        User                        m_LoggedInUser;
+        readonly List<Photo> r_PhotosDisplayed = new List<Photo>();
+        private ImageSearcherLogic m_ImageSearcherLogicItem;
+        User m_LoggedInUser;
 
         public UserControlImageSearcher(User i_LoggedUser)
         {
@@ -53,34 +55,36 @@ namespace A17_Ex03_UI
         {
             r_PhotosDisplayed.Clear();
 
-            List<System.Drawing.Image> sy = new List<System.Drawing.Image>();
+            List<Image> sy = new List<Image>();
+            Thread[] threads = new Thread[i_Photolist.Count];
+            int index = 0;
 
-            Thread featch = new Thread(() =>
+            foreach (Photo photo in i_Photolist)
             {
-                foreach (Photo photo in i_Photolist)
+                threads[index] = new Thread(() =>
                 {
-                    Thread T = new Thread(() =>
+                    Image newPhoto = photo.ImageNormal;
+                    lock (this)
                     {
-                        System.Drawing.Image newPhoto = photo.ImageNormal;
-                        lock (this)
-                        {
-                            sy.Add(newPhoto);
-                            r_PhotosDisplayed.Add(photo);
-                        }
+                        sy.Add(newPhoto);
+                        r_PhotosDisplayed.Add(photo);
+                    }
 
-                    });
-                    T.Start();
-                    T.Join();
-                }
-            });
+                });
+                threads[index].Start();
+                index++;
+            }
 
-            featch.Start();
-            featch.Join();
+            for (int i = 0; i < i_Photolist.Count; i++)
+            {
+                threads[i].Join();
+            }
 
-            imageListFromUser.Images.AddRange(sy.ToArray()); 
 
+            imageListFromUser.Images.AddRange(sy.ToArray());
             listViewPhotoDisplay.View = View.LargeIcon;
             listViewPhotoDisplay.LargeImageList = imageListFromUser;
+
 
             for (int j = 0; j < this.imageListFromUser.Images.Count; j++)
             {
@@ -107,7 +111,7 @@ namespace A17_Ex03_UI
             checkBoxUserTaggedWith.Items.Clear();
             foreach (String userName in m_ImageSearcherLogicItem.photosHolderByUsers.m_PhotosByList.Keys)
             {
-                    checkBoxUserTaggedWith.Items.Add(userName);
+                checkBoxUserTaggedWith.Items.Add(userName);
             }
         }
 

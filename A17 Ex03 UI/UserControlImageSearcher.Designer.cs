@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.checkBoxUserTaggedWith = new System.Windows.Forms.CheckedListBox();
             this.listViewPhotoDisplay = new System.Windows.Forms.ListView();
             this.buttonSearchPhotos = new System.Windows.Forms.Button();
@@ -47,27 +48,27 @@
             this.checkBoxUserTaggedWith.BackColor = System.Drawing.SystemColors.Menu;
             this.checkBoxUserTaggedWith.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkBoxUserTaggedWith.FormattingEnabled = true;
-            this.checkBoxUserTaggedWith.Location = new System.Drawing.Point(13, 83);
-            this.checkBoxUserTaggedWith.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxUserTaggedWith.Location = new System.Drawing.Point(20, 130);
             this.checkBoxUserTaggedWith.Name = "checkBoxUserTaggedWith";
-            this.checkBoxUserTaggedWith.Size = new System.Drawing.Size(199, 204);
+            this.checkBoxUserTaggedWith.Size = new System.Drawing.Size(298, 312);
             this.checkBoxUserTaggedWith.TabIndex = 10;
             // 
             // listViewPhotoDisplay
             // 
-            this.listViewPhotoDisplay.Location = new System.Drawing.Point(265, 12);
-            this.listViewPhotoDisplay.Margin = new System.Windows.Forms.Padding(2);
+            this.listViewPhotoDisplay.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.listViewPhotoDisplay.Location = new System.Drawing.Point(398, 19);
+            this.listViewPhotoDisplay.MultiSelect = false;
             this.listViewPhotoDisplay.Name = "listViewPhotoDisplay";
-            this.listViewPhotoDisplay.Size = new System.Drawing.Size(705, 465);
+            this.listViewPhotoDisplay.Size = new System.Drawing.Size(1091, 646);
             this.listViewPhotoDisplay.TabIndex = 13;
             this.listViewPhotoDisplay.UseCompatibleStateImageBehavior = false;
             // 
             // buttonSearchPhotos
             // 
-            this.buttonSearchPhotos.Location = new System.Drawing.Point(265, 488);
-            this.buttonSearchPhotos.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSearchPhotos.Location = new System.Drawing.Point(398, 762);
             this.buttonSearchPhotos.Name = "buttonSearchPhotos";
-            this.buttonSearchPhotos.Size = new System.Drawing.Size(116, 38);
+            this.buttonSearchPhotos.Size = new System.Drawing.Size(174, 59);
             this.buttonSearchPhotos.TabIndex = 14;
             this.buttonSearchPhotos.Text = "SearchPhotos";
             this.buttonSearchPhotos.UseVisualStyleBackColor = true;
@@ -75,10 +76,9 @@
             // 
             // buttonOpenSelectedPhoto
             // 
-            this.buttonOpenSelectedPhoto.Location = new System.Drawing.Point(858, 488);
-            this.buttonOpenSelectedPhoto.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonOpenSelectedPhoto.Location = new System.Drawing.Point(1321, 762);
             this.buttonOpenSelectedPhoto.Name = "buttonOpenSelectedPhoto";
-            this.buttonOpenSelectedPhoto.Size = new System.Drawing.Size(112, 38);
+            this.buttonOpenSelectedPhoto.Size = new System.Drawing.Size(168, 59);
             this.buttonOpenSelectedPhoto.TabIndex = 15;
             this.buttonOpenSelectedPhoto.Text = "Select";
             this.buttonOpenSelectedPhoto.UseVisualStyleBackColor = true;
@@ -95,10 +95,9 @@
             this.checkedListBoxYearOfPhoto.BackColor = System.Drawing.SystemColors.Menu;
             this.checkedListBoxYearOfPhoto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBoxYearOfPhoto.FormattingEnabled = true;
-            this.checkedListBoxYearOfPhoto.Location = new System.Drawing.Point(13, 333);
-            this.checkedListBoxYearOfPhoto.Margin = new System.Windows.Forms.Padding(2);
+            this.checkedListBoxYearOfPhoto.Location = new System.Drawing.Point(20, 520);
             this.checkedListBoxYearOfPhoto.Name = "checkedListBoxYearOfPhoto";
-            this.checkedListBoxYearOfPhoto.Size = new System.Drawing.Size(199, 153);
+            this.checkedListBoxYearOfPhoto.Size = new System.Drawing.Size(298, 234);
             this.checkedListBoxYearOfPhoto.TabIndex = 16;
             // 
             // labelYearOfPhotos
@@ -106,9 +105,10 @@
             this.labelYearOfPhotos.AutoSize = true;
             this.labelYearOfPhotos.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelYearOfPhotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.labelYearOfPhotos.Location = new System.Drawing.Point(10, 303);
+            this.labelYearOfPhotos.Location = new System.Drawing.Point(15, 473);
+            this.labelYearOfPhotos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelYearOfPhotos.Name = "labelYearOfPhotos";
-            this.labelYearOfPhotos.Size = new System.Drawing.Size(228, 17);
+            this.labelYearOfPhotos.Size = new System.Drawing.Size(326, 25);
             this.labelYearOfPhotos.TabIndex = 17;
             this.labelYearOfPhotos.Text = "Choose a year:                      ";
             // 
@@ -117,9 +117,10 @@
             this.labelUserInPhoto.AutoSize = true;
             this.labelUserInPhoto.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelUserInPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.labelUserInPhoto.Location = new System.Drawing.Point(10, 52);
+            this.labelUserInPhoto.Location = new System.Drawing.Point(15, 81);
+            this.labelUserInPhoto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUserInPhoto.Name = "labelUserInPhoto";
-            this.labelUserInPhoto.Size = new System.Drawing.Size(227, 17);
+            this.labelUserInPhoto.Size = new System.Drawing.Size(329, 25);
             this.labelUserInPhoto.TabIndex = 18;
             this.labelUserInPhoto.Text = "Choose friends in the photo\\s:";
             // 
@@ -129,9 +130,10 @@
             this.labelHeadLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelHeadLine.ForeColor = System.Drawing.Color.White;
             this.labelHeadLine.Image = global::A17_Ex03_UI.Properties.Resources.Top;
-            this.labelHeadLine.Location = new System.Drawing.Point(5, 17);
+            this.labelHeadLine.Location = new System.Drawing.Point(8, 27);
+            this.labelHeadLine.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHeadLine.Name = "labelHeadLine";
-            this.labelHeadLine.Size = new System.Drawing.Size(216, 20);
+            this.labelHeadLine.Size = new System.Drawing.Size(345, 32);
             this.labelHeadLine.TabIndex = 19;
             this.labelHeadLine.Text = "Filter Your Images Here!";
             // 
@@ -140,9 +142,10 @@
             this.labelYearError.AutoSize = true;
             this.labelYearError.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelYearError.ForeColor = System.Drawing.Color.DarkRed;
-            this.labelYearError.Location = new System.Drawing.Point(15, 499);
+            this.labelYearError.Location = new System.Drawing.Point(22, 780);
+            this.labelYearError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelYearError.Name = "labelYearError";
-            this.labelYearError.Size = new System.Drawing.Size(223, 17);
+            this.labelYearError.Size = new System.Drawing.Size(324, 25);
             this.labelYearError.TabIndex = 20;
             this.labelYearError.Text = "Please choose only one year.";
             // 
@@ -151,15 +154,16 @@
             this.labelSelectedPhotoError.AutoSize = true;
             this.labelSelectedPhotoError.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelSelectedPhotoError.ForeColor = System.Drawing.Color.DarkRed;
-            this.labelSelectedPhotoError.Location = new System.Drawing.Point(662, 499);
+            this.labelSelectedPhotoError.Location = new System.Drawing.Point(1035, 779);
+            this.labelSelectedPhotoError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSelectedPhotoError.Name = "labelSelectedPhotoError";
-            this.labelSelectedPhotoError.Size = new System.Drawing.Size(179, 17);
+            this.labelSelectedPhotoError.Size = new System.Drawing.Size(260, 25);
             this.labelSelectedPhotoError.TabIndex = 21;
             this.labelSelectedPhotoError.Text = "Please choose a photo.";
             // 
             // UserControlImageSearcher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.labelSelectedPhotoError);
             this.Controls.Add(this.labelYearError);
@@ -171,9 +175,8 @@
             this.Controls.Add(this.buttonSearchPhotos);
             this.Controls.Add(this.listViewPhotoDisplay);
             this.Controls.Add(this.checkBoxUserTaggedWith);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserControlImageSearcher";
-            this.Size = new System.Drawing.Size(983, 536);
+            this.Size = new System.Drawing.Size(1514, 838);
             this.ResumeLayout(false);
             this.PerformLayout();
 
