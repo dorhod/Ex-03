@@ -63,6 +63,16 @@ namespace A17_Ex03_UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap facebook_like_icon__3 {
+            get {
+                object obj = ResourceManager.GetObject("facebook_like_icon__3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fb_icon_325x325 {
             get {
                 object obj = ResourceManager.GetObject("fb_icon_325x325", resourceCulture);

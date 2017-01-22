@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using Facebook;
 using A17_Ex03_Logic;
+using System.Threading;
 
 namespace A17_Ex03_UI
 {
@@ -19,7 +21,7 @@ namespace A17_Ex03_UI
             m_PostsAmountToDisplay = 10;          
         }
 
-        public void SetPosts()
+        public void fetchPosts()
         {
             try
             {
@@ -78,7 +80,7 @@ namespace A17_Ex03_UI
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
-            SetPosts();
+            fetchPosts();
         }
     }
 }

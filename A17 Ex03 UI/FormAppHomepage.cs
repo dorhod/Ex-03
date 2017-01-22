@@ -127,7 +127,7 @@ namespace A17_Ex03_UI
             UserControlFilterWall PageFeed = new UserControlFilterWall();
             tabPageFeed.Controls.Add(PageFeed);
 
-            PageFeed.SetPosts();
+            PageFeed.fetchPosts();
         }
 
         private void fetchUserPhotos(TabPage tabPagePhotos) { 
