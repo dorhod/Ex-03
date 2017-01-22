@@ -31,26 +31,27 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label_likeAmount = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_message = new System.Windows.Forms.Label();
-            this.pictureBox_PostPic = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxSenderPhoto = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.labelTime = new System.Windows.Forms.Label();
             this.labelSender = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonComment = new System.Windows.Forms.Button();
             this.textBoxComment = new System.Windows.Forms.TextBox();
             this.labelStory = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_PostPic = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSenderPhoto = new System.Windows.Forms.PictureBox();
+            this.buttonComment = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_PostPic)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSenderPhoto)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_PostPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSenderPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -67,7 +68,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.labelStory, 0, 4);
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(29, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(1114, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
@@ -85,16 +86,18 @@
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.5F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.5F));
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.58547F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.41453F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247F));
             this.tableLayoutPanel5.Controls.Add(this.label_likeAmount, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button1, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.pictureBox1, 1, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 288);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(200, 42);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1098, 42);
             this.tableLayoutPanel5.TabIndex = 11;
             // 
             // label_likeAmount
@@ -104,19 +107,9 @@
             this.label_likeAmount.Location = new System.Drawing.Point(3, 10);
             this.label_likeAmount.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.label_likeAmount.Name = "label_likeAmount";
-            this.label_likeAmount.Size = new System.Drawing.Size(40, 32);
+            this.label_likeAmount.Size = new System.Drawing.Size(52, 32);
             this.label_likeAmount.TabIndex = 3;
             this.label_likeAmount.Text = "Likes";
-            // 
-            // pictureBox1
-            // 
-
-            this.pictureBox1.Location = new System.Drawing.Point(56, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // label_message
             // 
@@ -132,15 +125,6 @@
             this.label_message.TabIndex = 0;
             this.label_message.Text = "message";
             // 
-            // pictureBox_PostPic
-            // 
-            this.pictureBox_PostPic.Location = new System.Drawing.Point(3, 233);
-            this.pictureBox_PostPic.Name = "pictureBox_PostPic";
-            this.pictureBox_PostPic.Size = new System.Drawing.Size(68, 49);
-            this.pictureBox_PostPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox_PostPic.TabIndex = 0;
-            this.pictureBox_PostPic.TabStop = false;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -154,15 +138,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(465, 100);
             this.tableLayoutPanel3.TabIndex = 8;
-            // 
-            // pictureBoxSenderPhoto
-            // 
-            this.pictureBoxSenderPhoto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBoxSenderPhoto.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxSenderPhoto.Name = "pictureBoxSenderPhoto";
-            this.pictureBoxSenderPhoto.Size = new System.Drawing.Size(100, 78);
-            this.pictureBoxSenderPhoto.TabIndex = 4;
-            this.pictureBoxSenderPhoto.TabStop = false;
             // 
             // tableLayoutPanel4
             // 
@@ -216,21 +191,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1108, 72);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // buttonComment
-            // 
-            this.buttonComment.BackgroundImage = global::A17_Ex03_UI.Properties.Resources.Top;
-            this.buttonComment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonComment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonComment.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonComment.Location = new System.Drawing.Point(938, 6);
-            this.buttonComment.Name = "buttonComment";
-            this.buttonComment.Size = new System.Drawing.Size(160, 47);
-            this.buttonComment.TabIndex = 8;
-            this.buttonComment.Text = "Comment";
-            this.buttonComment.UseVisualStyleBackColor = true;
-            this.buttonComment.Click += new System.EventHandler(this.buttonComment_Click);
-            // 
             // textBoxComment
             // 
             this.textBoxComment.AllowDrop = true;
@@ -255,7 +215,59 @@
             this.labelStory.TabIndex = 7;
             this.labelStory.Text = "Story";
             // 
-            // Post
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(67, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox_PostPic
+            // 
+            this.pictureBox_PostPic.Location = new System.Drawing.Point(3, 233);
+            this.pictureBox_PostPic.Name = "pictureBox_PostPic";
+            this.pictureBox_PostPic.Size = new System.Drawing.Size(68, 49);
+            this.pictureBox_PostPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox_PostPic.TabIndex = 0;
+            this.pictureBox_PostPic.TabStop = false;
+            // 
+            // pictureBoxSenderPhoto
+            // 
+            this.pictureBoxSenderPhoto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBoxSenderPhoto.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxSenderPhoto.Name = "pictureBoxSenderPhoto";
+            this.pictureBoxSenderPhoto.Size = new System.Drawing.Size(100, 78);
+            this.pictureBoxSenderPhoto.TabIndex = 4;
+            this.pictureBoxSenderPhoto.TabStop = false;
+            // 
+            // buttonComment
+            // 
+            this.buttonComment.BackgroundImage = global::A17_Ex03_UI.Properties.Resources.Top;
+            this.buttonComment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonComment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonComment.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonComment.Location = new System.Drawing.Point(938, 6);
+            this.buttonComment.Name = "buttonComment";
+            this.buttonComment.Size = new System.Drawing.Size(160, 47);
+            this.buttonComment.TabIndex = 8;
+            this.buttonComment.Text = "Comment";
+            this.buttonComment.UseVisualStyleBackColor = true;
+            this.buttonComment.Click += new System.EventHandler(this.buttonComment_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(853, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(242, 36);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Show Post Comments";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // UserControlPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -264,20 +276,20 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(1400, 0);
-            this.Name = "Post";
-            this.Size = new System.Drawing.Size(1182, 418);
+            this.Name = "UserControlPost";
+            this.Size = new System.Drawing.Size(1182, 449);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_PostPic)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSenderPhoto)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_PostPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSenderPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +312,6 @@
         private System.Windows.Forms.Label label_likeAmount;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

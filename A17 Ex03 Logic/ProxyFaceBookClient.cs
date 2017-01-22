@@ -17,17 +17,17 @@ namespace A17_Ex03_Logic
 
         public override object Get(string request)
         {
-            object bas = base.Get(request);
+            object baseResult = base.Get(request);
 
             List<WallPost> Posts = new List<WallPost>();
 
-            JsonObject results = bas as JsonObject;
+            JsonObject results = baseResult as JsonObject;
             JsonArray posts = (JsonArray)results[0];
-            Thread featch = new Thread(() =>
+            Thread mainThread = new Thread(() =>
             {
                 foreach (JsonObject post in posts)
                 {
-                    Thread T = new Thread(() =>
+                    Thread thread = new Thread(() =>
                     {
                         WallPost newPost = new WallPost(post);
                         lock (this)
@@ -36,15 +36,13 @@ namespace A17_Ex03_Logic
                         }
 
                     });
-                    T.Start();
+                    thread.Start();
                 }
-
-                Console.WriteLine("");
 
             });
 
-            featch.Start();
-            featch.Join();
+            mainThread.Start();
+            mainThread.Join();
 
             return Posts;
         }

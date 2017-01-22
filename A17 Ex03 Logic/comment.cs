@@ -8,14 +8,19 @@ namespace A17_Ex03_Logic
 {
     public class Comment
     {
-        String Created_time { get; set; }
-        String Sender { get; set; }
-        String Message { get; set; }
-        String Id { get; set; }
-        bool UserLiked { get; set; }
+        public String Created_time { get; set; }
+        public String Sender { get; set; }
+        public String Message { get; set; }
+        public String Id { get; set; }
+        public bool UserLiked { get; set; }
+
+        public String UserComment { get; set; }
 
         public Comment(JsonObject i_Post)
         {
+            Created_time = "";
+            UserComment = "";
+
             JsonObject From = parseJson<JsonObject>("from", i_Post);
             if (From != null)
             {
@@ -26,6 +31,11 @@ namespace A17_Ex03_Logic
             Message = parseJson<string>("message", i_Post);
             Created_time = parseJson<string>("created_time", i_Post);
             Id = parseJson<string>("id", i_Post);
+        }
+
+        public void sendComment()
+        {
+            PostReaction.CommentOnPost(UserComment, Id);
         }
 
         private T parseJson<T>(String i_Value, JsonObject i_Json)

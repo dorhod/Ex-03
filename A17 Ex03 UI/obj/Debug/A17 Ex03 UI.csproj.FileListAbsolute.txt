@@ -25,3 +25,4 @@ C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj
 C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17_Ex03_UI.FormAppHomepage.resources
 C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17_Ex03_UI.FormImageReaction.resources
 C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17_Ex03_UI.comments.resources
+C:\Users\dor\Source\Repos\A17 Ex03 Dor 204120869 Almog 305744856\A17 Ex03 UI\obj\Debug\A17_Ex03_UI.UserControlPost.resources

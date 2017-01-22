@@ -14,6 +14,7 @@ namespace A17_Ex03_Logic
         public string       SenderPictureURL { get; set; }
         public string       PictureURL { get; set; }
         public JsonObject   From { get; set; }
+        public string       FromId { get; set; }
 
         public WallPost(JsonObject i_Post)
         {
@@ -21,11 +22,11 @@ namespace A17_Ex03_Logic
             if(From != null)
             {
                 Sender = parseJson<string>("name", From);
-                String fromId = parseJson<string>("id", From);
-                if(fromId != null)
+                FromId = parseJson<string>("id", From);
+                if(FromId != null)
                 {
                     FacebookClient fbUser = new FacebookClient(AppSettings.GetSettings().LastAccessToken);
-                    JsonObject result = fbUser.Get(fromId + "/?fields=picture{url}") as JsonObject;
+                    JsonObject result = fbUser.Get(FromId + "/?fields=picture{url}") as JsonObject;
                     result = (result[0] as JsonObject)[0] as JsonObject;
                     SenderPictureURL = parseJson<string>("url", result);
                 }

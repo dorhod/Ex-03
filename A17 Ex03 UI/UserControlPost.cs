@@ -30,5 +30,11 @@ namespace A17_Ex03_UI
             PostReaction.CommentOnPost(textBoxComment.Text, PostID);
             textBoxComment.Text = "Write a comment...";
         }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            comments Comments = new comments(PostID);
+            Comments.Show();
+        }
     }
 }

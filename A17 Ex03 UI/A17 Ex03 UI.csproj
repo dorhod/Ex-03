@@ -110,7 +110,11 @@
     <EmbeddedResource Include="UserControlImageSearcher.resx">
       <DependentUpon>UserControlImageSearcher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPost.resx">
+      <DependentUpon>UserControlPost.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\A17_Ex03_Logic.Comment.datasource" />
     <None Include="Properties\DataSources\FacebookWrapper.ObjectModel.Comment.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
